@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Bell, Calendar, Plus, Edit2, MoreVertical, Eye, ArrowLeft, ArrowRight} from "lucide-react";
 import Sidebar from "./components/Sidebar.jsx";
+import Form from "./components/form/Form.jsx";
 
 // import data from "../public/data.json";
 
@@ -203,6 +204,7 @@ function App() {
                                     <div>
                                         <div className="flex gap-3">
                                             <button
+                                                onClick={() => setShowCreateForm(true)}
                                                 className="px-5 py-2.5 bg-orange-500 text-white rounded-lg text-sm font-medium hover:bg-orange-600 flex items-center gap-2">
                                                 <Plus className="w-4 h-4"/>
                                                 Create Notice
@@ -242,7 +244,7 @@ function App() {
 
                                 </div>
 
-                                {/* Table */}
+
                                 <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                                     <table className="w-full">
                                         <thead className="bg-gray-50 border-b border-gray-200">
